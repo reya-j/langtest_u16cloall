@@ -1,6 +1,21 @@
 # Language setting
 language: clojure
-
+services:
+ # - cassandra 
+ # - elasticsearch 
+ # - memcached 
+ # - mongodb 
+  - mysql 
+ # - neo4j 
+  - postgres 
+ # - rabbitmq 
+ # - redis 
+  - selenium 
+ # - sqlite 
+ # - couchdb 
+  - rethinkdb 
+ # - riak
+  
 # Version number
 lein:
   - lein2
@@ -18,3 +33,8 @@ build:
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
   ci:
     - lein version
+    - echo $SHIPPABLE_MYSQL_BINARY
+    - echo $SHIPPABLE_POSTGRES_BINARY
+    - echo $SHIPPABLE_SELENIUM_BINARY
+    - echo $SHIPPABLE_RETHINKDB_BINARY
+    
