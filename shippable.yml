@@ -28,7 +28,7 @@ lein:
 build:
   pre_ci_boot:
     image_name: drydock/u16cloall
-    image_tag: v5.5.1
+    image_tag: v5.4.1
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
   ci:
